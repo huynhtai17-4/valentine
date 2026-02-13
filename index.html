@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="custom-cursor">
+        <span class="cursor-heart">❤️</span>
+    </div>
+
+    <div id="loading-screen">
+        <div class="loading-heart">❤️</div>
+        <div class="loading-text">Cưng ơi 👉👈...</div>
+    </div>
+
+    <div class="animated-bg"></div>
+
+    <div class="floating-hearts" id="floating-hearts"></div>
+    <div class="particles" id="particles"></div>
+
+    <div class="music-control" id="music-control" title="Bật/Tắt nhạc">
+        <svg id="music-icon" viewBox="0 0 24 24">
+            <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+        </svg>
+    </div>
+
+    <!-- Nút Next để chuyển section (thay vì click toàn trang) -->
+    <div id="next-btn" class="next-button" title="Next">Tiếp</div>
+
+    <audio id="bg-music" loop>
+        <source src="images/Chăm Em Một Đời.mp3" type="audio/mpeg">
+    </audio>
+
+    <section class="hero">
+        <h1 class="hero-title">Happy Valentine's Day ❤️</h1>
+        <h2 class="hero-name" id="lover-name">Hỡi vì tinh tú của anh</h2>
+        <p class="hero-subtitle">Tặng em - PHAN BẢO HUYỀN 🥲</p>
+        <div class="scroll-indicator">
+            
+        </div>
+        <div class="hero-floating-gallery" id="hero-floating-gallery" aria-hidden="true"></div>
+
+        <!-- Khung 4 ảnh (các ảnh để trong HTML để bạn dễ sửa) -->
+        <div class="hero-frame" id="hero-frame" aria-label="Khung ảnh kỷ niệm">
+            <img src="images/Anh1.jpg" class="frame-img">
+            <img src="images/Anh2.jpg" class="frame-img">
+            <img src="images/Anh3.jpg" class="frame-img">
+            <img src="images/Anh4.jpg" class="frame-img">
+        </div>
+    </section>
+
+    <section id="letter-section">
+        <div class="container">
+            <h2 class="section-title">Thư Gửi Em 💌</h2>
+            <div class="love-letter">
+                <p class="letter-text">
+                    Cục dàng ơi,<br><br>
+                    Mặc dù ở ngoài, anh bô bô cái miệng được, não nhảy số nhanh🥲. Nhưng mà không hiểu sao, khi đứng trước
+                    em thì anh lại nói hong được...😢cho anh xin lỗi. Anh biết lúc đó em cũng buồn, cũng thấy hụt hẫng
+                    chắc cũng có chút thất vọng về anh...😢anh sẽ cố gắng thay đổi, sẽ mở miệng, não sẽ nhảy số nhanh đặc biệt 
+                    là những điều dành cho oem...Hôm nay là Valentine đầu tiền của tụi mình, đáng lẽ anh nên tặng em đúng hôm nay mới 
+                    trọn vẹn...nhưng anh sợ em về quê sớm nên muốn đưa cho em trước, món quà mặc dù hong to hay lớn lao gì cả ^^ chỉ là 
+                    những món quả nho nhỏ nhưng anh mong là em sẽ thích nóa...chính tay anh lựa đó dễ thương hong ^^. Valentine không có gì hơn
+                    chúc em khỏe mạnh...sống lâu trăm tuổi🥹🥲...sống dị mới bên nhau lâu được^^<br><br>
+                </p>
+                <p>Tính chửi ở cái khúc trăm tuổi chứ gì =))</p>
+                <div class="letter-signature">
+                    Chàng khờ của em<br>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reasons-section">
+        <div class="container">
+            <h2 class="section-title">Những Điều Mà Anh Bị Em Bỏ Bùa</h2>
+            <div class="love-reasons">
+                <div class="reason-card">
+                    <div class="reason-number">01</div>
+                    <p class="reason-text">Cười 🥹, lúc mà em cười tự nhiên anh thí vui lây🥹, kiểu nó mang năng lượng tích cực vứi anh vler...cho nên đừng có hay giận cũng như buồn nhen ^^</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-number">02</div>
+                    <p class="reason-text">Tính cách lâu lâu tẻn tẻn 🥹 có cái này mới zui được.</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-number">03</div>
+                    <p class="reason-text">Cách em quan tâm, hỏi hang đồ...kiểu lâu lâu nói mí câu vu vơ tưởng quan tâm mình thiệt nhưng mà KHÔNG PHẢI 🙄...quá buồn.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="counter-section">
+        <div class="container">
+            <div class="counter-box">
+                <h3 class="counter-label">Hôm nay được</h3>
+                <div class="counter-number" id="days-count">12</div>
+                <h3 class="counter-label">ngày rùi nè ☺️🥰 tính từ 06/02 ^^</h3>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container special-button-container">
+            <button class="special-button" onclick="openModal()">Nhấn vào đây đi em ❤️</button>
+        </div>
+    </section>
+
+    <div class="modal" id="love-modal">
+        <div class="modal-content">
+            <div class="hero-frame" id="modal-hero-frame" style="display:flex;justify-content:center;align-items:center;">
+                <img src="images/tanghoa.jpg" class="frame-img" style="display:block;max-width:250px;">
+            </div>
+            <h2 class="modal-text">Trên tay anh cầm một đoá hoa, mong em gật đầu đồng ý nha...Oh baby...</h2>
+            <p style="margin-bottom: 20px;">Như dị shao mà hoq đồng ý được 🙄 </p>
+            <button class="close-modal" onclick="closeModal()">YÊU BÉ ❤️</button>
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+        <span class="close-lightbox">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="Full Image">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
